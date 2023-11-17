@@ -5,15 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schiavoni Automotores</title>
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
 </head>
 
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="red-nav">
+
+            </div>
             <div class="container-fluid px-10">
                 <h1><a class="navbar-brand" href="index.html"><img src="assets/img/LOGO SCHIVONI_LOGO BLANCO.png"
                             class="logo" alt="Schiavoni Automotores"></a></h1>
@@ -71,16 +77,18 @@
                     </div>
                 </div>
             </div>
-            <div id="carouselId" class="carousel slide col mt-5  position-absolute align-items-center container-imgs" data-bs-ride="carousel">
+            <div id="carouselId" class="carousel slide col position-absolute align-items-center container-imgs"
+                data-bs-ride="carousel">
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
-                        <img src="./assets/img/803ae7da876be5b7e1daed0cdf4512e6.jpeg" class="w-100 d-block" alt="First slide">
+                        <img src="./assets/img/803ae7da876be5b7e1daed0cdf4512e6.jpeg" class="w-100 d-block"
+                            alt="First slide">
                     </div>
                     <div class="carousel-item">
                         <img src="./assets/img/unsplash_8xyki0bqvgw.png" class="w-100 d-block" alt="Second slide">
                     </div>
                 </div>
-            </div>      
+            </div>
         </section>
 
         <section class="section-marcas">
@@ -95,6 +103,152 @@
                 <img src="assets/img/2bc9c34af7f6f4bb17ed81271e96c913.png" alt="">
             </div>
         </section>
+
+        <section class="cd-main-content">
+            <div class="cd-tab-filter-wrapper">
+                <div class="cd-tab-filter">
+                    <ul class="cd-filters">
+                        <li class="placeholder">
+                            <a data-type="all" href="#0">Todos</a> <!-- selected option on mobile -->
+                        </li>
+                        <li class="filter"><a class="selected" href="#0" data-type="all">Todos</a></li>
+                        <li class="filter" data-filter=".chevrolet"><a href="#0" data-type="chevrolet">Chevrolet</a></li>
+                        <li class="filter" data-filter=".toyota"><a href="#0" data-type="toyota">Toyota</a></li>
+                    </ul> <!-- cd-filters -->
+                </div> <!-- cd-tab-filter -->
+            </div> <!-- cd-tab-filter-wrapper -->
+
+            <section class="cd-gallery">
+                <ul>
+                    <li class="mix chevrolet check-toyota radio2 option3">
+                        <div class="card">
+                            <img src="/assets/img/803ae7da876be5b7e1daed0cdf4512e6.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Chevorlet Cruze</h5>
+                                <br>
+                                <p class="card-text"><strong>Precio:</strong> $10.500.000</p>
+                                <p class="card-text"><strong>Motor:</strong> 1.2 L</p>
+                                <br>
+                                <a href="#" class="btn btn-primary button-card">Consultar</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mix toyota check2 radio2 option2">
+                        <div class="card">
+                            <img src="/assets/img/803ae7da876be5b7e1daed0cdf4512e6.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Chevorlet Cruze</h5>
+                                <p class="card-text">Precio: $10.500.000</p>
+                                <p class="card-text">Motor: 1.2 L</p>
+                                <br>
+                                <a href="#" class="btn btn-primary button-card">Consultar</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mix color-1 check3 radio3 option1">
+                        <div class="card">
+                            <img src="/assets/img/803ae7da876be5b7e1daed0cdf4512e6.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Chevorlet Cruze</h5>
+                                <p class="card-text">Precio: $10.500.000</p>
+                                <p class="card-text">Motor: 1.2 L</p>
+                                <br>
+                                <a href="#" class="btn btn-primary button-card">Consultar</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mix color-1 check3 radio2 option4"><img src="img/img-4.jpg" alt="Image 4"></li>
+                    <li class="mix color-1 check1 radio3 option2"><img src="img/img-5.jpg" alt="Image 5"></li>
+                    <li class="mix color-2 check2 radio3 option3"><img src="img/img-6.jpg" alt="Image 6"></li>
+                    <li class="mix color-2 check2 radio2 option1"><img src="img/img-7.jpg" alt="Image 7"></li>
+                    <li class="mix color-1 check1 radio3 option4"><img src="img/img-8.jpg" alt="Image 8"></li>
+                    <li class="mix color-2 check1 radio2 option3"><img src="img/img-9.jpg" alt="Image 9"></li>
+                    <li class="mix color-1 check3 radio2 option4"><img src="img/img-10.jpg" alt="Image 10"></li>
+                    <li class="mix color-1 check3 radio3 option2"><img src="img/img-11.jpg" alt="Image 11"></li>
+                    <li class="mix color-2 check1 radio3 option1"><img src="img/img-12.jpg" alt="Image 12"></li>
+                    <li class="gap"></li>
+                    <li class="gap"></li>
+                    <li class="gap"></li>
+                </ul>
+                <div class="cd-fail-message">No hay resultados</div>
+            </section> <!-- cd-gallery -->
+
+            <div class="cd-filter">
+                <form>
+                    <div class="cd-filter-block">
+                        <h4>Buscar</h4>
+
+                        <div class="cd-filter-content">
+                            <input type="search" placeholder="Ingrese una marca">
+                        </div> <!-- cd-filter-content -->
+                    </div> <!-- cd-filter-block -->
+
+                    <div class="cd-filter-block">
+                        <h4>Check boxes</h4>
+
+                        <ul class="cd-filter-content cd-filters list">
+                            <li>
+                                <input class="filter" data-filter=".check1" type="checkbox" id="checkbox1">
+                                <label class="checkbox-label" for="checkbox1">Option 1</label>
+                            </li>
+
+                            <li>
+                                <input class="filter" data-filter=".check2" type="checkbox" id="checkbox2">
+                                <label class="checkbox-label" for="checkbox2">Option 2</label>
+                            </li>
+
+                            <li>
+                                <input class="filter" data-filter=".check3" type="checkbox" id="checkbox3">
+                                <label class="checkbox-label" for="checkbox3">Option 3</label>
+                            </li>
+                        </ul> <!-- cd-filter-content -->
+                    </div> <!-- cd-filter-block -->
+
+                    <div class="cd-filter-block">
+                        <h4>Select</h4>
+
+                        <div class="cd-filter-content">
+                            <div class="cd-select cd-filters">
+                                <select class="filter" name="selectThis" id="selectThis">
+                                    <option value="">Choose an option</option>
+                                    <option value=".option1">Option 1</option>
+                                    <option value=".option2">Option 2</option>
+                                    <option value=".option3">Option 3</option>
+                                    <option value=".option4">Option 4</option>
+                                </select>
+                            </div> <!-- cd-select -->
+                        </div> <!-- cd-filter-content -->
+                    </div> <!-- cd-filter-block -->
+
+                    <div class="cd-filter-block">
+                        <h4>Radio buttons</h4>
+
+                        <ul class="cd-filter-content cd-filters list">
+                            <li>
+                                <input class="filter" data-filter="" type="radio" name="radioButton" id="radio1"
+                                    checked>
+                                <label class="radio-label" for="radio1">All</label>
+                            </li>
+
+                            <li>
+                                <input class="filter" data-filter=".radio2" type="radio" name="radioButton" id="radio2">
+                                <label class="radio-label" for="radio2">Choice 2</label>
+                            </li>
+
+                            <li>
+                                <input class="filter" data-filter=".radio3" type="radio" name="radioButton" id="radio3">
+                                <label class="radio-label" for="radio3">Choice 3</label>
+                            </li>
+                        </ul> <!-- cd-filter-content -->
+                    </div> <!-- cd-filter-block -->
+                </form>
+
+                <a href="#0" class="cd-close">Cerrar</a>
+            </div> <!-- cd-filter -->
+
+            <a href="#0" class="cd-filter-trigger">Filtros</a>
+        </section> <!-- cd-main-content -->
+
     </main>
 
 
@@ -105,6 +259,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/main.js"></script> <!-- Resource jQuery -->
 </body>
 
 </html>
