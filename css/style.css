@@ -30,6 +30,7 @@ Primary style
     font-family: "Sofia Sans", sans-serif;
     color: var(--color-text);
     background-color: var(--color-bg);
+    scroll-behavior: smooth;
   }
   
   a {
@@ -65,7 +66,7 @@ Primary style
 }
 
 .logo {
-    width: 12.5rem;
+    width: 15.625rem;
 }
 
 .navbar-brand {
@@ -73,19 +74,31 @@ Primary style
     position: relative;
 }
 
-.nav-item a {
+.nav-item a, .active {
     color: var(--color-text);
     font-family: var(--font-titulo);
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.nav-item a:hover, .active:hover {
+    transform: translateZ(50px);
+    transform: scale(1.05);
+    color: var(--color-primary);
+}
+.nav-item a:active {
+    transform: translateY(-1px);
+    transform: rotate(2deg);
 }
 
 .red-container {
     width: 45%;
     height: 90vh;
     background-color: var(--color-primary);
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
 
 .title h2 {
@@ -102,7 +115,7 @@ Primary style
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 20.376px;
+    line-height: 25.376px;
     width: 80%;
     color: var(--color-bg);
 }
@@ -118,7 +131,35 @@ Primary style
     flex-shrink: 0;
     border-radius: 8px;
     background-color: var(--color-bg);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border: none;
+    transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.title button:hover{
+    transform: translateZ(50px);
+    box-shadow: 0 0 20px 0px var(--color-secondary);
+    transform: scale(1.05);
+    color: var(--color-accent);
+}
+.title button:active {
+    transform: translateY(-1px);
+    transform: rotate(3deg);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--color-bg);
+    color: var(--color-accent);
+    a {
+        color: var(--color-accent);
+    }
+}
+
+.titulo {
+    font-family: Sofia Sans;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--color-text);
 }
 
 .carousel {
@@ -129,6 +170,7 @@ Primary style
 
 .carousel-inner {
     border-radius: 1.25rem 0 0 1.25rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .contacto {
@@ -176,6 +218,25 @@ Primary style
 .button-card {
     background-color: var(--color-accent) !important;
     border: var(--color-secondary);
+    transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.button-card:hover{
+    transform: translateZ(50px);
+    box-shadow: 0 0 20px 0px var(--color-primary);
+    transform: scale(1.05);
+    background-color: var(--color-primary) !important;
+    color: var(--color-bg);
+}
+.button-card:active {
+    transform: translateY(-1px);
+    transform: rotate(3deg);
+    box-shadow: 0 5px 10px rgba(255, 0, 0, 0.2);
+    background-color: var(--color-bg);
+    color: var(--color-accent);
+    a {
+        color: var(--color-accent);
+    }
 }
 
 .card-title {
@@ -605,7 +666,7 @@ Primary style
     color: #9a9a9a;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1rem;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -673,7 +734,8 @@ Primary style
     border-color: transparent;
     background-color: #e6e6e6;
     /* prevent jump - ios devices */
-    font-size: 1.6rem !important;
+    font-size: 1rem !important;
+    font-family: 'Sofia Sans';
   }
   .cd-filter-block input[type='search']::-webkit-search-cancel-button {
     display: none;
@@ -702,7 +764,7 @@ Primary style
   }
   .cd-filter-block select {
     cursor: pointer;
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
   .cd-filter-block select::-ms-expand {
     display: none;
@@ -728,7 +790,7 @@ Primary style
   .cd-filter-block .checkbox-label,
   .cd-filter-block .radio-label {
     padding-left: 24px;
-    font-size: 1.4rem;
+    font-size: 1rem;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -790,5 +852,35 @@ Primary style
     /* hide custom arrow on Firefox - select element */
     .cd-filter-block .cd-select::after {
       display: none;
+    }
+  }
+
+  @media (min-width: 1400px) { 
+    .title h2 {
+        font-size: 5.625rem;
+        color: var(--color-bg);
+    }
+
+    .title p {
+        font-size: 1.75rem;
+        line-height: 2.5rem;
+    }
+
+    .title button {
+        width: 200px;
+        height: 50px;
+        padding: 6.113px 12.225px;
+        justify-content: center;
+        align-items: center;
+        gap: 4.075px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        background-color: var(--color-bg);
+        border: none;
+        font-size: 1.375rem;
+    }
+
+    .social-logo {
+        width: 1.875rem;
     }
   }
